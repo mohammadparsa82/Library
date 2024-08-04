@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    
+    <form class="form-signin" method="post" action="{% url 'accounts:signup' %}">
+        {% csrf_token %}
+        <div class="form-group">
+         {{form.as_p}}
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>   
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      
+</body>
+</html>
